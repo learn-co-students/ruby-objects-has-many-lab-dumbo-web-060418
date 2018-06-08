@@ -1,0 +1,24 @@
+require 'pry'
+
+class Song
+	attr_accessor :artist, :name, :song
+
+	@@all = []
+
+	def initialize(name)
+		@name = name
+		@@all << self
+	end
+
+	def self.all
+		@@all
+	end
+
+def artist_name
+		if self.artist.respond_to?(:name)
+		  self.artist.name
+		else
+		  return nil
+		end
+	end
+end
